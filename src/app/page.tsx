@@ -7,9 +7,6 @@ import Hero from '@/components/hero';
 export default function HomePage() {
   return (
     <main className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
-      {/* Navbar */}
-      {/*<Navbar />*/}
-
       {/* Hero Section */}
       <Hero />
 

@@ -10,7 +10,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full absolute top-0 left-0 z-50 bg-transparent text-white">
+    <motion.nav
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      className="w-full absolute top-0 left-0 z-50 bg-transparent text-white">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Animated Brand Name */}
         <Link href="/" className="cursor-pointer">
@@ -52,35 +56,7 @@ export default function Navbar() {
           </AnimatePresence>
         </button>
       </div>
-
-      {/* Animated Mobile Navigation Drawer (Blended with Hero) */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            key="mobile-menu"
-            initial={{ y: '-100%', opacity: 0 }}
-            animate={{ y: '0%', opacity: 1 }}
-            exit={{ y: '-100%', opacity: 0 }}
-            transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className="absolute top-full left-0 w-full backdrop-blur-md shadow-lg rounded-b-lg p-6 md:hidden">
-            <div className="flex flex-col space-y-4 items-center">
-              <NavLink href="/about" onClick={() => setIsOpen(false)}>
-                About
-              </NavLink>
-              <NavLink href="/work" onClick={() => setIsOpen(false)}>
-                Work
-              </NavLink>
-              <NavLink href="/education" onClick={() => setIsOpen(false)}>
-                Education
-              </NavLink>
-              <NavLink href="/contact" onClick={() => setIsOpen(false)}>
-                Contact
-              </NavLink>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 }
 

@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Navbar from '@/components/navbar';
 import Link from 'next/link';
 
 export default function Hero() {
@@ -20,64 +21,67 @@ export default function Hero() {
   };
 
   return (
-    <section
-      className="relative w-full h-screen flex flex-col items-center justify-center text-center bg-gray-900 overflow-hidden"
-      onMouseMove={handleMouseMove}>
-      {/* Glow effect following cursor */}
-      <motion.div
-        className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
-        style={{
-          top: smoothY,
-          left: smoothX,
-          transform: 'translate(-50%, -50%)',
-        }}
-      />
-
-      <div className="absolute inset-0 pointer-events-none bg-transparent">
-        <div
-          className="w-full h-full opacity-10"
+    <>
+      <Navbar />
+      <section
+        className="relative w-full h-screen flex flex-col items-center justify-center text-center bg-gray-900 overflow-hidden"
+        onMouseMove={handleMouseMove}>
+        {/* Glow effect following cursor */}
+        <motion.div
+          className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
           style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
+            top: smoothY,
+            left: smoothX,
+            transform: 'translate(-50%, -50%)',
           }}
         />
-      </div>
 
-      {/* Main Heading */}
-      <motion.h1
-        className="text-5xl md:text-6xl font-bold leading-tight text-white relative z-10"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}>
-        Engineering Meets Strategy. <br />I Build Products That Drive Impact.
-      </motion.h1>
+        <div className="absolute inset-0 pointer-events-none bg-transparent">
+          <div
+            className="w-full h-full opacity-10"
+            style={{
+              backgroundImage:
+                'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+        </div>
 
-      {/* Subtext */}
-      <motion.p
-        className="mt-4 text-lg md:text-xl text-gray-300 relative z-10"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}>
-        Engineering-backed PM | Data-driven Thinker | Builder at Heart
-        <br />
-        Currently shaping the future as an <strong>Engineering Management Graduate Student.</strong>
-      </motion.p>
+        {/* Main Heading */}
+        <motion.h1
+          className="text-5xl md:text-6xl font-bold leading-tight text-white relative z-10"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}>
+          Engineering Meets Strategy. <br />I Build Products That Drive Impact.
+        </motion.h1>
 
-      {/* Call to Action */}
-      <motion.div
-        className="mt-6 relative z-10"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.6 }}>
-        <Link href="/contact">
-          <Button
-            variant="default"
-            className="px-6 py-3 text-lg font-semibold text-gray-900 bg-white hover:bg-gray-200 transition-all shadow-md hover:shadow-lg">
-            Let's Connect
-          </Button>
-        </Link>
-      </motion.div>
-    </section>
+        {/* Subtext */}
+        <motion.p
+          className="mt-4 text-lg md:text-xl text-gray-300 relative z-10"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}>
+          Engineering-backed PM | Data-driven Thinker | Builder at Heart
+          <br />
+          Currently shaping the future as an <strong>Engineering Management Graduate Student.</strong>
+        </motion.p>
+
+        {/* Call to Action */}
+        <motion.div
+          className="mt-6 relative z-10"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}>
+          <Link href="/contact">
+            <Button
+              variant="default"
+              className="px-6 py-3 text-lg font-semibold text-gray-900 bg-white hover:bg-gray-200 transition-all shadow-md hover:shadow-lg">
+              Let's Connect
+            </Button>
+          </Link>
+        </motion.div>
+      </section>
+    </>
   );
 }

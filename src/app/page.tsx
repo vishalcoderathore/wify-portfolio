@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import Objective from '@/components/objective';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import Hero from '@/components/hero';
@@ -7,12 +8,13 @@ export default function HomePage() {
   return (
     <main className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
       {/* Navbar */}
-      <Navbar />
+      {/*<Navbar />*/}
 
-      {/* Hero Section (w-full to take full width) */}
-      <div className="w-full">
-        <Hero />
-      </div>
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Objective Section */}
+      <Objective />
 
       {/* Call to Action */}
       <section className="text-center mt-10">

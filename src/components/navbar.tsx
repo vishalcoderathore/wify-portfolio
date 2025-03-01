@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-transparent text-white">
+    <nav className="w-full absolute top-0 left-0 z-50 bg-transparent text-white">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Animated Brand Name */}
         <Link href="/" className="cursor-pointer">

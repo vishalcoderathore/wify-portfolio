@@ -1,15 +1,52 @@
 'use client';
 
-import { Button } from '@/components/ui/button'; // Importing ShadCN Button
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function Hero() {
+  // Track mouse movement
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Smooth animation for glow movement
+  const smoothX = useSpring(mouseX, { stiffness: 50, damping: 20 });
+  const smoothY = useSpring(mouseY, { stiffness: 50, damping: 20 });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const { clientX, clientY } = e;
+    mouseX.set(clientX);
+    mouseY.set(clientY);
+  };
+
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-gray-900 to-black text-white">
+    <section
+      className="relative w-full h-screen flex flex-col items-center justify-center text-center bg-gray-900 overflow-hidden"
+      onMouseMove={handleMouseMove}>
+      {/* Glow effect following cursor */}
+      <motion.div
+        className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
+        style={{
+          top: smoothY,
+          left: smoothX,
+          transform: 'translate(-50%, -50%)',
+        }}
+      />
+
+      <div className="absolute inset-0 pointer-events-none bg-transparent">
+        <div
+          className="w-full h-full opacity-10"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)',
+            backgroundSize: '40px 40px',
+          }}
+        />
+      </div>
+
       {/* Main Heading */}
       <motion.h1
-        className="text-5xl md:text-6xl font-bold leading-tight"
+        className="text-5xl md:text-6xl font-bold leading-tight text-white relative z-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}>
@@ -18,7 +55,7 @@ export default function Hero() {
 
       {/* Subtext */}
       <motion.p
-        className="mt-4 text-lg md:text-xl text-gray-300"
+        className="mt-4 text-lg md:text-xl text-gray-300 relative z-10"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}>
@@ -27,14 +64,16 @@ export default function Hero() {
         Currently shaping the future as an <strong>Engineering Management Graduate Student.</strong>
       </motion.p>
 
-      {/* Call to Action using ShadCN Button */}
+      {/* Call to Action */}
       <motion.div
-        className="mt-6"
+        className="mt-6 relative z-10"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}>
         <Link href="/contact">
-          <Button variant="ghost" className="px-6 py-3 text-lg font-semibold">
+          <Button
+            variant="default"
+            className="px-6 py-3 text-lg font-semibold text-gray-900 bg-white hover:bg-gray-200 transition-all shadow-md hover:shadow-lg">
             Let's Connect
           </Button>
         </Link>

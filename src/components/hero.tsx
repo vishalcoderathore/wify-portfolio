@@ -41,9 +41,8 @@ export default function Hero() {
           <div
             className="w-full h-full opacity-10"
             style={{
-              backgroundImage:
-                'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)',
-              backgroundSize: '40px 40px',
+              backgroundImage: `url('/neural_network.png')`,
+              backgroundSize: 'cover',
             }}
           />
         </div>

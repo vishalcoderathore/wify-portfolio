@@ -10,7 +10,8 @@ export default function Objective() {
       <motion.div
         className="w-full md:w-1/2 flex flex-col justify-center text-left"
         initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.5 }} // ✅ Triggers when 50% visible, runs only once
         transition={{ duration: 0.8, ease: 'easeOut' }}>
         <h2 className="text-3xl md:text-5xl font-bold leading-tight text-white">
           "Good Product Managers think in terms of delivering value, not just features."
@@ -22,7 +23,8 @@ export default function Objective() {
       <motion.div
         className="w-full md:w-1/2 flex flex-col items-start justify-center text-left"
         initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}>
         <p className="text-lg md:text-xl text-gray-300">
           I’m an <span className="text-blue-400 font-bold">Aspiring Product Manager</span> with a passion for building

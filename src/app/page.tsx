@@ -1,7 +1,6 @@
 'use client';
 
 import Contact from '@/components/contact/page';
-import { Button } from '@/components/ui/button';
 import Objective from '@/components/objective';
 import Projects from '@/components/projects';
 import Work from '@/components/work/page';

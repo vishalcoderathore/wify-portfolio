@@ -77,7 +77,7 @@ export default function Hero() {
             <Button
               variant="default"
               className="px-6 py-3 text-lg font-semibold text-gray-900 bg-white hover:bg-gray-200 transition-all shadow-md hover:shadow-lg">
-              Let's Connect
+              Let&apos;s Connect
             </Button>
           </Link>
         </motion.div>

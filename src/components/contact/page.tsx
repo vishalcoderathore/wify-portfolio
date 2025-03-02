@@ -19,14 +19,14 @@ const Contact = (): ReactElement => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}>
-          📬 Let's Connect
+          📬 Let&apos;s Connect
         </motion.h2>
         <motion.p
           className="text-lg text-gray-300"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}>
-          Have a question or just want to say hello? Drop me a message, and I'll get back to you soon!
+          Have a question or just want to say hello? Drop me a message, and I&apos;ll get back to you soon!
         </motion.p>
       </motion.div>
 

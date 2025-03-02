@@ -78,7 +78,7 @@ const Contact = (): ReactElement => {
       <div className="flex flex-col items-center space-y-4 text-gray-300">
         {/* LinkedIn */}
         <Link
-          href="https://linkedin.com/in/your-profile"
+          href="https://linkedin.com/in/annandita-bhati/"
           target="_blank"
           className="flex items-center gap-2 hover:text-blue-400 transition">
           <FiLinkedin className="h-5 w-5" />

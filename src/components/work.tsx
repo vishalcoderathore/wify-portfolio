@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 const projects = [
   {
@@ -36,16 +37,30 @@ const projects = [
 ];
 export default function Work() {
   return (
-    <section className="w-full min-h-screen flex flex-col  items-center justify-center gap-12 py-24 px-6 md:px-24 bg-gray-900 text-white">
-      {/* Top Margin to Prevent Overlapping */}
-      <h2 className="text-4xl font-bold mb-12 text-center">My Work</h2>
+    <section
+      className="w-full min-h-screen flex flex-col items-center justify-center gap-12 py-24 px-6 md:px-24 bg-gray-900 text-white"
+      id="work">
+      <motion.h2
+        className="text-4xl font-bold mb-12 text-center"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}>
+        My Work
+      </motion.h2>
+
+      {/* Grid Container Animates When in View */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl overflow-hidden"
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.6 }} // Triggers animation when 60% is visible
         variants={{
           hidden: { opacity: 0, y: 50 },
-          visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { staggerChildren: 0.2 }, // Stagger effect for cards
+          },
         }}>
         {projects.map((project, index) => (
           <motion.div

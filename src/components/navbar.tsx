@@ -25,7 +25,7 @@ export default function Navbar() {
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-6">
             <NavLink href="/about">About</NavLink>
-            <NavLink href="/work">Work</NavLink>
+            <NavLink href="/#work">Work</NavLink>
             <NavLink href="/education">Education</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </div>
@@ -73,7 +73,7 @@ export default function Navbar() {
               <NavLink href="/about" onClick={() => setIsOpen(false)}>
                 About
               </NavLink>
-              <NavLink href="/work" onClick={() => setIsOpen(false)}>
+              <NavLink href="/#work" onClick={() => setIsOpen(false)}>
                 Work
               </NavLink>
               <NavLink href="/education" onClick={() => setIsOpen(false)}>

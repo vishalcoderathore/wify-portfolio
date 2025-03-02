@@ -2,9 +2,10 @@
 
 import { Button } from '@/components/ui/button';
 import Objective from '@/components/objective';
+import Projects from '@/components/projects';
+import Work from '@/components/work/page';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
-import Work from '@/components/work';
 
 export default function HomePage() {
   return (
@@ -19,9 +20,14 @@ export default function HomePage() {
         <Objective />
       </section>
 
-      {/* Work Section - Add ID for Direct Linking */}
+      {/* Work Section */}
       <section id="work" className="w-full min-h-screen flex items-center justify-center scroll-mt-20">
         <Work />
+      </section>
+
+      {/* Projects Section */}
+      <section id="work" className="w-full min-h-screen flex items-center justify-center scroll-mt-20">
+        <Projects />
       </section>
 
       {/* Call to Action Section */}

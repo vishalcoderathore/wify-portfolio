@@ -29,6 +29,7 @@ export default function Objective() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}>
+        <h2 className="text-4xl text-gray-300">👋 Meet Annandita</h2>
         <p className="text-lg md:text-xl text-gray-300 mt-6">
           Hi I’m Annandita, an <span className="text-blue-400 font-bold">Aspiring Product Manager</span> with a passion
           for building impactful products that drive value. With a background in engineering and a strategic mindset, I

@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import Hero from '@/components/hero';
+import Work from '@/components/work';
 
 export default function HomePage() {
   const sectionsRef = useRef<HTMLDivElement>(null);
@@ -39,14 +40,17 @@ export default function HomePage() {
 
   return (
     <main ref={sectionsRef} className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white overflow-hidden">
-      {/* Hero Section */}
+      {/*Hero Section      */}
       <div className="w-full h-screen flex items-center justify-center">
         <Hero />
       </div>
-
       {/* Objective Section */}
       <div className="w-full h-screen flex items-center justify-center">
         <Objective />
+      </div>
+      {/* Work Section */}
+      <div className="w-full min-h-screen flex items-center justify-center">
+        <Work />
       </div>
 
       {/* Call to Action Section */}
@@ -56,7 +60,6 @@ export default function HomePage() {
           <a href="/work">View My Work</a>
         </Button>
       </div>
-
       <Footer />
     </main>
   );

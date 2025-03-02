@@ -11,10 +11,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gray-900 text-white;
   }
-
 }
+
 
 :root {
   --background: oklch(1 0 0);

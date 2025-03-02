@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Objective() {
   return (
-    <section className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 py-20 px-24 bg-gray-900 text-white">
+    <section className="w-full h-screen flex flex-col md:flex-row items-center justify-center gap-12 py-24 px-6 md:px-24 bg-gray-900 text-white">
       {/* Left Side */}
       <motion.div
         className="w-full md:w-1/2 flex flex-col items-end justify-center"

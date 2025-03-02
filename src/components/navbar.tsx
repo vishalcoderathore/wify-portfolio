@@ -28,7 +28,7 @@ export default function Navbar() {
             <NavLink href="/#work">Work</NavLink>
             <NavLink href="/education">Education</NavLink>
             <NavLink href="/#projects">Projects</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+            <NavLink href="/#contact">Contact</NavLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,7 +83,7 @@ export default function Navbar() {
               <NavLink href="/#projects" onClick={() => setIsOpen(false)}>
                 Projects
               </NavLink>
-              <NavLink href="/contact" onClick={() => setIsOpen(false)}>
+              <NavLink href="/#contact" onClick={() => setIsOpen(false)}>
                 Contact
               </NavLink>
             </div>

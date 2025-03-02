@@ -1,5 +1,6 @@
 'use client';
 
+import Contact from '@/components/contact/page';
 import { Button } from '@/components/ui/button';
 import Objective from '@/components/objective';
 import Projects from '@/components/projects';
@@ -26,16 +27,13 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section */}
-      <section id="work" className="w-full min-h-screen flex items-center justify-center scroll-mt-20">
+      <section id="projects" className="w-full min-h-screen flex items-center justify-center scroll-mt-20">
         <Projects />
       </section>
 
       {/* Call to Action Section */}
-      <section className="w-full h-screen flex flex-col items-center justify-center text-center">
-        <h2 className="text-2xl md:text-4xl font-bold">Let's build something great together!</h2>
-        <Button className="mt-5" variant="default">
-          <a href="#work">View My Work</a>
-        </Button>
+      <section id="contact" className="w-full h-screen flex flex-col items-center justify-center text-center">
+        <Contact />
       </section>
 
       <Footer />

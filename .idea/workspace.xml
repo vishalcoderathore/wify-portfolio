@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="894a8668-5ab8-4c19-8906-66b43dd3e686" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/objective.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/objective.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/work/experience-data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/work/experience-data.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind-config.ts" afterDir="false" />
-    </list>
+    <list default="true" id="894a8668-5ab8-4c19-8906-66b43dd3e686" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +71,7 @@
       <workItem from="1740967526372" duration="169000" />
       <workItem from="1740967699076" duration="1429000" />
       <workItem from="1740969138495" duration="307000" />
-      <workItem from="1740969454550" duration="1912000" />
+      <workItem from="1740969454550" duration="2700000" />
     </task>
     <servers />
   </component>

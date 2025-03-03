@@ -1,6 +1,7 @@
 import { Quicksand } from 'next/font/google';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
+import Script from 'next/script';
 import './globals.css';
 
 // Load Quicksand font
@@ -49,6 +50,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Use Next.js <Script> for Google Analytics */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-0JVGS58HYR" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0JVGS58HYR');
+          `}
+        </Script>
+      </head>
       <body className={`${quicksand.variable} antialiased`}>{children}</body>
     </html>
   );

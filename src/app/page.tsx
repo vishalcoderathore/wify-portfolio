@@ -1,5 +1,3 @@
-'use client';
-
 import Contact from '@/components/contact/page';
 import Objective from '@/components/objective';
 import Projects from '@/components/projects';

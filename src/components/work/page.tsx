@@ -1,3 +1,5 @@
+'use client';
+
 import ExpandCollapse from '@/components/ui/expand-collapse';
 import { jobExperiences } from './experience-data';
 import React, { ReactElement } from 'react';

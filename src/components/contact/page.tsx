@@ -78,7 +78,7 @@ const Contact = (): ReactElement => {
       <div className="flex flex-col items-center space-y-4 text-gray-300">
         {/* LinkedIn */}
         <Link
-          href="https://linkedin.com/in/annandita-bhati/"
+          href={new URL(process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com/in/annandita-bhati')}
           target="_blank"
           className="flex items-center gap-2 hover:text-blue-400 transition">
           <FiLinkedin className="h-5 w-5" />
@@ -87,7 +87,7 @@ const Contact = (): ReactElement => {
 
         {/* Resume Download */}
         <Link
-          href="https://drive.google.com/your-resume-link"
+          href={new URL(process.env.NEST_PUBLIC_RESUME_ULR || 'https://drive.google.com/your-resume-link')}
           target="_blank"
           className="flex items-center gap-2 hover:text-green-400 transition">
           <IoDocumentText className="h-5 w-5" />

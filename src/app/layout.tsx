@@ -1,16 +1,13 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Quicksand } from 'next/font/google';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+// Load Quicksand font
+const quicksand = Quicksand({
+  variable: '--font-quicksand',
   subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 const siteUrl = String(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://annanditabhati.com');
@@ -52,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${quicksand.variable} antialiased`}>{children}</body>
     </html>
   );
 }

@@ -1,10 +1,12 @@
+import UnorderedList from '@/components/work/UnorderdList';
+
 export const jobExperiences = [
   {
     id: 'job-onto',
     title: 'Technical Project Engineering Intern',
     company: 'Onto Innovation | May 2024 - August 2024',
     duties: (
-      <ul className="list-disc list-inside text-gray-300 space-y-3">
+      <UnorderedList>
         <li>
           Improved product visibility by implementing an action card-based system for real-time tracking of
           semiconductor equipment installation and qualification in Japan, enhancing cross-functional collaboration
@@ -27,7 +29,7 @@ export const jobExperiences = [
           Presented process improvement strategies, securing 1st place in the 2024 Onto Innovation Internship
           Presentations for technical excellence, problem- solving, and innovation in semiconductor applications.
         </li>
-      </ul>
+      </UnorderedList>
     ),
   },
   {
@@ -35,7 +37,7 @@ export const jobExperiences = [
     title: 'Rapid Prototyping Lab Manager',
     company: 'University of St. Thomas | August 2023 - Present',
     duties: (
-      <ul className="list-disc list-inside text-gray-300">
+      <UnorderedList>
         <li>
           Led a team of 12 to manage 500+ rapid prototyping orders across university departments, using Trello for
           project management.
@@ -52,7 +54,7 @@ export const jobExperiences = [
           Building an automated inventory tracking system in Microsoft 365, integrating Power BI for real-time
           monitoring, demand forecasting, and process improvement, reducing project delays by 10% per semester.
         </li>
-      </ul>
+      </UnorderedList>
     ),
   },
   {
@@ -60,7 +62,7 @@ export const jobExperiences = [
     title: 'Marketing and Communications Intern',
     company: 'University of St. Thomas | June 2023 - Present',
     duties: (
-      <ul className="list-disc list-inside text-gray-300">
+      <UnorderedList>
         <li>
           Designed 300+ social media posts, web banners, and flyers with Canva, boosting page followers by 14% and
           enhancing brand engagement.
@@ -76,7 +78,7 @@ export const jobExperiences = [
         <li>
           Recognized for outstanding contributions, nominated for the Outstanding Support Service Award (Spring 2024).
         </li>
-      </ul>
+      </UnorderedList>
     ),
   },
   {
@@ -84,7 +86,7 @@ export const jobExperiences = [
     title: 'Technical Project Manager',
     company: 'Proxbotics Creation Technologies Pvt. Ltd. | July 2018 - January 2023',
     duties: (
-      <ul className="list-disc list-inside text-gray-300">
+      <UnorderedList>
         <li>
           Collaborated with a 20-member cross-functional team across engineering, manufacturing, marketing, and finance
           to drive on-time delivery of 15+ initiatives through strategic planning and process optimization.
@@ -106,7 +108,7 @@ export const jobExperiences = [
           platforms, increasing supplier engagement and lead conversion.
         </li>
         <li>Recruited and mentored 8 interns, strengthening team dynamics, knowledge sharing, and productivity.</li>
-      </ul>
+      </UnorderedList>
     ),
   },
 ];

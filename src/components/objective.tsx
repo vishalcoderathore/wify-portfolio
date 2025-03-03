@@ -38,7 +38,9 @@ export default function Objective() {
           love solving complex problems, driving innovation, and collaborating with teams to build great experiences.
         </p>
         {/* Link to About Page */}
-        <Link href="/about" className="mt-6 text-lg font-semibold text-pink-400 hover:text-pink-500 transition">
+        <Link
+          href="/about"
+          className="mt-6 text-lg font-semibold text-pink-400 hover:text-pink-300 transition-all duration-300">
           Learn More About Me ↗
         </Link>
       </motion.div>

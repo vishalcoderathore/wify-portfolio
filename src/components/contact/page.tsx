@@ -29,7 +29,6 @@ const Contact = (): ReactElement => {
           Have a question or just want to say hello? Drop me a message, and I&apos;ll get back to you soon!
         </motion.p>
       </motion.div>
-
       {/* Contact Form */}
       <motion.form
         className="w-full max-w-lg bg-gray-800 p-6 rounded-lg shadow-lg space-y-6"
@@ -39,7 +38,7 @@ const Contact = (): ReactElement => {
         transition={{ duration: 0.8, ease: 'easeOut' }}>
         {/* Name Input */}
         <div>
-          <label className="text-gray-300 text-sm font-medium">Your Name</label>
+          <label className="text-gray-300  font-medium">Your Name</label>
           <Input
             type="text"
             placeholder="John Doe"
@@ -49,7 +48,7 @@ const Contact = (): ReactElement => {
 
         {/* Email Input */}
         <div>
-          <label className="text-gray-300 text-sm font-medium">Your Email</label>
+          <label className="text-gray-300  font-medium">Your Email</label>
           <Input
             type="email"
             placeholder="you@example.com"
@@ -59,7 +58,7 @@ const Contact = (): ReactElement => {
 
         {/* Message Input */}
         <div>
-          <label className="text-gray-300 text-sm font-medium">Your Message</label>
+          <label className="text-gray-300  font-medium">Your Message</label>
           <Textarea
             placeholder="Write your message..."
             className="mt-2 bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-400"
@@ -69,7 +68,8 @@ const Contact = (): ReactElement => {
         {/* Submit Button */}
         <Button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition">
+          className="px-6 py-3 text-lg font-semibold text-white bg-pink-500 rounded-lg shadow-md transition-all duration-300
+        hover:bg-pink-600 hover:shadow-[0_0_15px_5px] hover:shadow-pink-400">
           Send Message
         </Button>
       </motion.form>

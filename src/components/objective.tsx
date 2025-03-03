@@ -17,7 +17,7 @@ export default function Objective() {
           width={512}
           height={512}
           layout="intrinsic"
-          alt="Annandita's Avatar"
+          alt="Annandita Bhati - PM"
           className="object-cover rounded-full self-end ml-auto"
         />
       </motion.div>

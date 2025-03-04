@@ -61,6 +61,7 @@ export default function RootLayout({
             gtag('config', 'G-0JVGS58HYR');
           `}
         </Script>
+        <title>Annandita Bhati | Product Manager</title>
       </head>
       <body className={`${quicksand.variable} antialiased`}>{children}</body>
     </html>

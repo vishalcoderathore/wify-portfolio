@@ -66,7 +66,7 @@ const Projects = (): ReactElement => {
         className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl overflow-hidden"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={{
           hidden: { opacity: 0, y: 50 },
           visible: {

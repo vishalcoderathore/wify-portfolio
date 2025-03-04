@@ -26,7 +26,6 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-6">
             <NavLink href="/about">About</NavLink>
             <NavLink href="/#work">Work</NavLink>
-            <NavLink href="/education">Education</NavLink>
             <NavLink href="/#projects">Projects</NavLink>
             <NavLink href="/#contact">Contact</NavLink>
           </div>
@@ -76,9 +75,6 @@ export default function Navbar() {
               </NavLink>
               <NavLink href="/#work" onClick={() => setIsOpen(false)}>
                 Work
-              </NavLink>
-              <NavLink href="/education" onClick={() => setIsOpen(false)}>
-                Education
               </NavLink>
               <NavLink href="/#projects" onClick={() => setIsOpen(false)}>
                 Projects

@@ -25,7 +25,7 @@ export default function Hero() {
     <>
       <Navbar />
       <section
-        className="relative w-full h-screen flex flex-col items-center justify-center text-center px-24 bg-gray-900 overflow-hidden"
+        className="relative w-full h-screen flex flex-col items-center justify-center text-center px-6 md:px-24 bg-gray-900 overflow-hidden"
         onMouseMove={handleMouseMove}>
         {/* Glow effect following cursor */}
         <motion.div

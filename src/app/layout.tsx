@@ -2,7 +2,7 @@ import { Quicksand } from 'next/font/google';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 import Script from 'next/script';
-import './globals.css';
+import '../styles/globals.css';
 
 // Load Quicksand font
 const quicksand = Quicksand({

@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     }
 
     const params = {
-      Source: process.env.SES_VERIFIED_EMAIL as string,
+      Source: process.env.SES_VERIFIED_DOMAIN as string,
       Destination: { ToAddresses: [process.env.SES_VERIFIED_EMAIL as string] },
       Message: {
         Subject: { Data: `New Contact Form Submission from ${name}` },
@@ -27,6 +27,8 @@ export async function POST(req: Request) {
         },
       },
     };
+
+    console.log(params);
 
     await sesClient.send(new SendEmailCommand(params));
 

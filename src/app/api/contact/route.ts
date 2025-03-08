@@ -28,8 +28,6 @@ export async function POST(req: Request) {
       },
     };
 
-    console.log(JSON.stringify(params, null, 2));
-
     await sesClient.send(new SendEmailCommand(params));
 
     return NextResponse.json({ success: true, message: 'Email sent successfully' }, { status: 200 });
